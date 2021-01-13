@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyJobs4You</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<b><h1>Registration Form - Job Seekers</h1></b>
+	<br>
+	<br> 
+	<form method="post">
+	<table>
+		<tr>
+			<td>Login Name:</td>
+			<td><input required="true" minlength="5" maxlength="16" pattern="[a-z0-9A-A]{5,50}" type="text" name="name"></td>
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td><input required="true" minlength="5" maxlength="16" pattern="[a-z0-9A-A]{5,50}" type="Password" name="name"></td>
+		</tr>
+		<tr>
+			<td>Re-enter Password:</td>
+			<td><input required="true" minlength="5" maxlength="16" pattern="[a-z0-9A-A]{5,50}" type="Password" name="name"></td>
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td>
+				<input type="radio" name="a" value="male">male
+				<input  type="radio" name="a" value="female">female
+			</td>
+		</tr>
+		<tr>
+			<td>Experience (in Years):</td>
+			<td>
+				<select>
+					<option>0-1</option>
+					<option>1-2</option>
+					<option>2-3</option>
+					<option>3+</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	<a href="thankyou.html"><button type="button">Register</button></a>
+	<button type="Reset">Cancel</button>
+
+	</form>
+
+</body>
+</html>
