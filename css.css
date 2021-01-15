@@ -1,0 +1,36 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+.container{
+	width: 100%;
+	border-bottom: solid grey 2px;
+}
+.header {
+	width: 70%;
+	background-color: #dbd332;
+	margin: 0px auto;
+}
+.header h1{
+	color: #bf4530;
+	font-weight: bold;
+	padding-left: 30%
+}
+.header h2{
+	color: #32d140;
+	font-weight: bold;
+	text-align: center; 
+}
+.header-main{
+	width: 20%;
+	height: 1000px;
+	float: left;
+	border-right: solid grey 2px;
+}
+.container-main{
+	width: 80%
+	border-left:solid grey 2px;
+}
+.container-main ul{
+	padding-left: 50px; 
+}
