@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giải phương trình</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<h1>Giải phương trình: ax+b=0</h1>
+<button onclick="giaiptb1()">Nhấp để giải</button>
+
+
+<h1>Giải phương trình ax<sup>2</sup>+bx+c=0</h1>
+<button onclick="giaiptb2()">Nhấp để giải</button>
+
+<h1>Tìm số lớn nhất </h1>
+<button onclick="timmax()">Nhấp để giải</button>
+
+
+<script type="text/javascript">
+	function giaiptb1(){
+	var a,b,x;
+	a=prompt(' Nhập a')
+	b=prompt('Nhập b')
+	if(a==0&&b!=0){
+		alert('Phương trình vô nghiệm')
+	}else if(a==0&&b==0){
+		alert('Phương trình vô số nghiệm')
+	}else{
+		x=-b/a
+		alert('x='+x)
+
+	}}
+
+	function giaiptb2(){
+		var a,b,c,d,x,x1,x2,
+		a=prompt('Nhập a')
+		b=prompt('Nhập b')
+		c=prompt('Nhập c')
+		if(a==0&&b==0&&c!=0){
+			alert('Phương trình vô nghiệm')
+		}else if(a==0&&b==0&&c==0){
+			alert('Phương trình vô số nghiệm')
+		}else if(a==0&&b!=0){
+			x=-c/b
+			alert('Phương trình có nghiệm duy nhất x1=x2='+x)
+		}else if(a!=0){
+			d=b*b-4*a*c
+			if(d<0){
+				alert('Phương trình vô nghiệm')
+			}else if(d==0){
+				x=-b/(2*a)
+				alert('Phương trình có nghiệm kép x1=x2='+x)	
+			}else if(d>0){
+				x1=(-b+Math.sqrt(d))/(2*a)
+				x2=(-b-Math.sqrt(d))/(2*a)
+				alert('Phương trình có hai nghiệm phân biệt x1='+x1+',x2='+x2)
+
+
+			}
+		}
+	}
+
+
+	function timmax(){
+		var i,a,b,c,d,e,max;
+		a=prompt('Nhập a')
+		b=prompt('Nhập b')
+		c=prompt('Nhập c')
+		d=prompt('Nhập d')
+		e=prompt('Nhập e')
+		max=a
+		if(b>max){
+			max=b
+		}
+		if(c>max){
+			max=c
+		}
+		if(d>max){
+			max=d}
+		
+		if(e>max){
+			max=e
+		}
+		alert('max='+max)
+		}
+
+</script>
+</body>
+</html>
