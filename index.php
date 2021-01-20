@@ -14,6 +14,10 @@
 <a href="https://nhaaptech1.herokuapp.com/bai3.1.html" target="_blank"><h2>Bài 4.1</h2></a>
 <a href="https://nhaaptech1.herokuapp.com/aboutus.html" target="_blank"><h2>Bài 5.1</h2></a>
 <a href="https://nhaaptech1.herokuapp.com/bai6.1.html" target="_blank" title="Giai phuong trinh bac 1, 2, tim max cua 5 so"><h2>Bài 6.1</h2></a>
+<a href="https://nhaaptech1.herokuapp.com/bai6.2.html" target="_blank"><h2>Bài 6.2</h2></a>
+<a href="https://nhaaptech1.herokuapp.com/bai7.1.html" target="_blank"><h2>Bài 7.1</h2></a>
+<a href="https://nhaaptech1.herokuapp.com/bai7.2.html" target="_blank"><h2>Bài 7.2</h2></a>
+
 
 
 
