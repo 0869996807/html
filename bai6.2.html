@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giai phuong trinh bac 1</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="ls6.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Giải Phương trình Bậc 1</h1>
+		</div>
+		<div class="a">
+				<button onclick="clicka()">Nhập Giá Trị A</button>
+		</div>
+		<div class="b">
+				<button onclick="clickb()">Nhập Giá trị B</button>
+		</div>
+		<div class="kq">
+				<button onclick="clickkq()">In Kết Quả</button>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		var a,b,kq
+		function clicka(){
+			a=prompt('Nhập a')
+		}
+		function clickb(){
+			b=prompt('Nhập b')
+		}
+		function clickkq(){
+			if(a==0&&b!=0){
+				alert('Phương trình vô nghiệm')
+			}else if(a==0&&b==0){
+				alert('Phương trình vô số nghiệm')
+			}else{
+				kq=-b/a
+				alert('kq='+kq)
+			}
+	}
+	</script>
+</body>
+</html>

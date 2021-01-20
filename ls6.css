@@ -1,0 +1,28 @@
+.container{
+	background-color: white;
+	padding: 0px;
+	margin: 0px;
+	border:solid #187bed 1px;
+	display: block;
+	min-height: 120px;
+
+}
+.header{
+	background-color: #187bed;
+	color: white;
+}
+.a button{
+	background-color: green;
+	color: white;
+	float: left;
+}
+.b button{
+	background-color: green;
+	color: white;
+	float: left;
+}
+.kq button{
+	background-color: green;
+	color: white;
+	float: left;
+}
