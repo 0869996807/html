@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>maytinh</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ls7.1.css">
+</head>
+<body>
+  <div class="header">
+    <button onclick="tinh()" style="font-size: 100px">Tính</button>
+  </div>  
+<script type="text/javascript">
+  var a,b,pt,kq
+  function cong(){
+    kq=parseInt(a)+parseInt(b)
+    alert('kq='+kq)
+  }
+  function tru(){
+     kq=parseInt(a)-parseInt(b)
+    alert('kq='+kq)
+  }
+  function nhan(){
+    kq=parseInt(a)*parseInt(b)
+    alert('kq='+kq)
+  }
+  function chia(){
+    kq=parseInt(a)/parseInt(b)
+    alert('kq='+kq)
+  }
+  function tinh(){
+  a=prompt('nhap a')
+  b=prompt('nhap b')
+  pt=prompt('nhap phep tinh:+,-,x,/')
+  switch(pt){
+    case "+":
+      cong();
+      break;
+    case "-":
+      tru();
+      break
+    case "x":
+      nhan();
+      break;
+    case "/":
+      chia();
+      break;
+    default:
+      alert('Phep tinh sai, moi nhap lai');
+      break;
+  }
+
+  }
+
+</script>
+</body>
+</html>
