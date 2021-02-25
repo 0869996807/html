@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Danh sách sinh viên</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-info text-light">
+				Thông tin sinh viên
+			</div>
+			<div class="card-body">
+				<div class="form-group">
+					<label for="fullname">Ho va ten:</label>
+					<input type="text" name="fullname" id="fullname" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="age">Tuoi:</label>
+					<input type="number" name="age" id="age" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="address">Dia chi:</label>
+					<input type="text" name="address" id="address" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-info" id="btnsave">Save</button>
+				<button type="reset" class="btn btn-info" id="btnreset">Reset</button>
+			</div>
+		</div>
+		<table class="table table-bordered">
+			<thead>
+				<tr class="bg-info">
+					<th>No</th>
+					<th>Ho va ten</th>
+					<th>Tuoi</th>
+					<th>Dia chi</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+			
+		</table>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$('#btnsave').click(function(){
+				saveData()
+
+			})
+			$('#btnreset').click(function(){
+				resetdata()
+			})
+
+		})
+		var count=0
+		function saveData(){
+			var fullname=$('#fullname').val()
+			var age=$('#age').val()
+			var address=$('#address').val()
+			var email=$('#email').val()
+			count++;
+			$('table tbody').append(`<tr id="item_${count}">
+				<td>${count}</td>
+				<td>${fullname}</td>
+				<td>${age}</td>
+				<td>${address}</td>
+				<td>${email}</td>
+				`)
+		}
+		function resetdata(){
+			$('#fullname').val('')
+			$('#age').val('')
+			$('#address').val('')
+			$('#email').val('')
+
+		}
+	</script>
+</body>
+</html>
