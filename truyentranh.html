@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Truyen tranh</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+	<nav class="nav bg-info justify-content-center" style="border-bottom:solid blue 3px">
+		<ul class="nav">
+			 <li><i class="fa fa-home m-lg-2" aria-hidden="true" style="cursor:pointer"></i></li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">Menu</li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">Cuoi</li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">Tho</li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">Truyen ma</li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">Truyen ngan</li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">Tieu thuyet</li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">Truyen gay</li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">truyen +</li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">Tam su</li>
+			 <li class="nav-item m-lg-2 btn-info" style="color: black">Tim truyen</li>
+		</ul>
+	</nav>
+	<div class="container-fuil">
+		<div class="btn-group-vertical" style="margin-left: 30px; width: 12%;" >
+			 <button class="btn-group btn-success m-lg-1">Dang truyen ngan</button>
+			 <button class="btn-group btn-info m-lg-1">Dang truyen teen</button>
+			 <button class="btn-group btn-danger m-lg-1">Dang tieu thuyet</button>
+			 <button class="btn-group btn-dark m-lg-1">Dang xuyen khong</button>
+			 <button class="btn-group btn-info m-lg-1">Dang truyen gay</button>
+			 <button class="btn-group btn-warning m-lg-1">Dang truyen les</button>
+			 <button class="btn-group btn-link m-lg-1">Dang truyen 16+</button>
+			 <button class="btn-group btn-dark m-lg-1">Dang truyen ma</button>
+			 <button class="btn-group btn-info m-lg-1">Dang truyen My</button>
+			 <button class="btn-group btn-warning m-lg-1">Dang truyen moi</button>
+			 <button class="btn-group btn-danger m-lg-1">Dang truyen full</button>
+		</div>
+		<div class="col-md-9" style="float: right; margin-left: 20px">
+			<div class="row" id="fill_data">
+				
+			</div>
+		</div>
+			<form method="get" style="margin-top: 15px">
+				<div style="width: 60%;margin: 0 auto;">
+					<label>Tieu de:</label>
+					<input class="bg-white" required="true" type="text" style="width: 80%; float: right" name="title" id="title">
+				</div>
+				<div style="width: 60%;margin: 0 auto;">
+					<label>link hinh anh:</label>
+					<input class="bg-white" required="true" type="link" style="width: 80%; float: right" name="link" id="link">
+				</div>
+				<div style="width: 60%;margin: 0 auto;">
+					<label>Diem vote:</label>
+					<input class="bg-white" required="true" type="number" style="width: 80%; float: right" name="vote" id="vote">
+				</div>
+				<div style="width: 60%;margin: 0 auto;">
+					<label>luot xem:</label>
+					<input class="bg-white" required="true" type="number" style="width: 80%; float: right" name="view" id="view">
+				</div>
+				<div style="width: 60%;margin: 0 auto;">
+					<button class="bg-info" onclick="addData()">Them</button>
+				</div>
+			</form>
+	
+	</div>	
+	<script type="text/javascript">
+		var json = localStorage.getItem('dstruyen_data')
+		var dstruyen=JSON.parse(json)
+		if(json==null){
+			dstruyen= []
+		}
+		$(function(){
+			showdata()
+		})
+
+		function addData(){
+			title=$('title').val()
+			link=$('link').val()
+			vote=$('vote').val()
+			view=$('view').val()
+
+			dst={
+				'title': title,
+				'link': link,
+				'vote': vote,
+				'view': view
+			}
+			dstruyen.push(dst)
+
+			showdata();
+			localStorage.setItem ('dstruyen_data', JSON.stringify(dstruyen))
+			return false
+		}
+		function showdata(){
+			$('#fill_data').html('')
+			for(i=0; i < dstruyen.length; i++){
+				$('#fill_data').append(`<div class="col-md-3">
+							<div class="card>
+								<img class="card-img-top" src="${dstruyen[i].link}">
+								<div class="card-body">
+									<p style="font-weight: bold;" class="card-title">${dstruyen[i].title}</p>
+									<p class="card-text">Luotxem: ${dstruyen[i].view}</p>
+									<p class="card-text">Luotvote: ${dstruyen[i].vote}</p>
+								</div>
+							</div>
+						</div>`)
+			}
+		}
+
+	</script>
+		
+</body>
+</html>
